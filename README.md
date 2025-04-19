@@ -1,16 +1,21 @@
-# Project R-100 Telegram Bot
+# R100MarketBot
 
-A market monitoring bot using Flask and Telegram.
+This is the Project R-100 AI trading assistant running on Telegram via Flask + Railway.
 
 ## Setup
 
-1. Set environment variables:
-   - `BOT_TOKEN`: Your Telegram bot token
-   - `TELEGRAM_ID`: Your Telegram user ID
-   - `WEBSITE_URL`: Your Railway public app URL
+1. Set the following environment variables:
+   - `BOT_TOKEN`
+   - `TELEGRAM_ID`
+   - `PORT` = 8000
 
-2. Deploy via Railway or any hosting platform that supports Flask.
+2. Deploy to Railway and set webhook via:
 
-## Endpoint
-
-- `/{BOT_TOKEN}` for receiving Telegram webhook events.
+```python
+import requests
+BOT_TOKEN = "your_token"
+WEBHOOK_URL = "https://your-app-name.up.railway.app/webhook"
+url = f"https://api.telegram.org/bot{BOT_TOKEN}/setWebhook"
+res = requests.post(url, json={"url": WEBHOOK_URL})
+print(res.text)
+```

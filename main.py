@@ -24,7 +24,7 @@ def send_message(chat_id, text):
 
 @app.route("/", methods=["GET"])
 def index():
-    return "✅ Bot is running."
+    return "✅ R100MarketBot is running."
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
