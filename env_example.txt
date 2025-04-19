@@ -1,3 +1,3 @@
 BOT_TOKEN=7564441117:AAGf-zop7FrqviMIL0F4Zhkg9iNNGsrTlyc
 TELEGRAM_ID=5080801821
-WEBSITE_URL=https://project-r100-bot.up.railway.app
+WEBSITE_URL=https://web-production-0883b.up.railway.app/
