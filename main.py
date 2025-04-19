@@ -8,7 +8,6 @@ BOT_TOKEN = os.environ.get("BOT_TOKEN")
 TELEGRAM_ID = os.environ.get("TELEGRAM_ID")
 
 @app.route("/webhook", methods=["POST"])
-def webhook()
 def webhook():
     data = request.get_json()
     if "message" in data:
